@@ -1,5 +1,14 @@
 {{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
 {{!-- Feel free to remove this! --}}
 
-{{outlet}}
+
+{{#ui-grid}}
+    {{#ui-column wide=4 }}
+        <div class="ui segment">
+           left
+        </div>
+    {{/ui-column}}
+    {{#ui-column wide=12 }}
+        {{outlet}}
+    {{/ui-column}}
+{{/ui-grid}}
