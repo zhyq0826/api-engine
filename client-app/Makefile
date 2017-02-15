@@ -1,0 +1,3 @@
+dev:
+	ember server
+

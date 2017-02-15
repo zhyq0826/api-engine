@@ -2,13 +2,38 @@
 {{!-- Feel free to remove this! --}}
 
 
-{{#ui-grid}}
-    {{#ui-column wide=4 }}
-        <div class="ui segment">
-           left
+<div class="ui grid">
+    {{#ui-column wide=2 }}
+        {{#ui-container}}
+            {{#ui-vertical-menu}}
+                <a href="" class="item">item</a>
+                <a href="" class="item">item</a>
+                <a href="" class="item">item</a>
+                <a href="" class="item">item</a>
+            {{/ui-vertical-menu}}
+        {{/ui-container}}
+    {{/ui-column}}
+    {{#ui-column wide=14 }}
+        <div class="ui divided grid">
+            <div class="row">
+                <div class="ui header">
+                    My first test
+                </div>
+            </div>
+            <div class="row">
+                <div class="ui segments">
+                    <div class="ui segment">
+                        {{#ui-tab-menu tabs='first,second' active='first'}}
+                        {{/ui-tab-menu}}
+                        {{#ui-tab-segment tab='first' active=true}}
+                          headers
+                        {{/ui-tab-segment}}
+                        {{#ui-tab-segment tab='second'}}
+                          variables
+                        {{/ui-tab-segment}}
+                    </div>
+                </div>
+            </div>
         </div>
     {{/ui-column}}
-    {{#ui-column wide=12 }}
-        {{outlet}}
-    {{/ui-column}}
-{{/ui-grid}}
+</div>
