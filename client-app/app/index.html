@@ -7,10 +7,9 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    {{content-for "head"}}    
-
+    {{content-for "head"}}
+    
     <link rel="stylesheet" href="{{rootURL}}assets/semantic.min.css">
-    <link rel="stylesheet" href="{{rootURL}}assets/client-app.css">
     <link rel="stylesheet" href="{{rootURL}}assets/vendor.css">
     <link rel="stylesheet" href="{{rootURL}}assets/client-app.css">
 
@@ -19,8 +18,8 @@
   <body>
     {{content-for "body"}}
     
-    <script src="{{rootURL}}assets/semantic.min.js"></script>
     <script src="{{rootURL}}assets/vendor.js"></script>
+    <link rel="stylesheet" href="{{rootURL}}assets/semantic.min.js">
     <script src="{{rootURL}}assets/client-app.js"></script>
 
     {{content-for "body-footer"}}

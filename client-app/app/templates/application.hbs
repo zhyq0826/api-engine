@@ -1,39 +1,25 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{!-- Feel free to remove this! --}}
+<div class="ui container">
+    <div class="ui grid">
+        <div class="row">
+            <div class="column">
+                <div class="ui pointing menu">
+                    {{#link-to "organizations" class="item" }}
+                        <h4 class="ui header">Organizations</h4>
+                    {{/link-to}}
+                    {{#link-to "settings" class="item" }}
+                        <h4 class="ui header">Settings</h4>
+                    {{/link-to}}
 
-
-<div class="ui grid">
-    {{#ui-column wide=2 }}
-        {{#ui-container}}
-            {{#ui-vertical-menu}}
-                <a href="" class="item">item</a>
-                <a href="" class="item">item</a>
-                <a href="" class="item">item</a>
-                <a href="" class="item">item</a>
-            {{/ui-vertical-menu}}
-        {{/ui-container}}
-    {{/ui-column}}
-    {{#ui-column wide=14 }}
-        <div class="ui divided grid">
-            <div class="row">
-                <div class="ui header">
-                    My first test
-                </div>
-            </div>
-            <div class="row">
-                <div class="ui segments">
-                    <div class="ui segment">
-                        {{#ui-tab-menu tabs='first,second' active='first'}}
-                        {{/ui-tab-menu}}
-                        {{#ui-tab-segment tab='first' active=true}}
-                          headers
-                        {{/ui-tab-segment}}
-                        {{#ui-tab-segment tab='second'}}
-                          variables
-                        {{/ui-tab-segment}}
-                    </div>
+                    {{#link-to "profile" class="item" }}
+                        <h4 class="ui header">Profile</h4>
+                    {{/link-to}}
                 </div>
             </div>
         </div>
-    {{/ui-column}}
+        <div class="row">
+            <div class="column">
+                {{outlet}}
+            </div>
+        </div>
+    </div>
 </div>
