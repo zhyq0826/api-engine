@@ -7,15 +7,15 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('team', function() {
-    this.route('project', {path: '/:project_name'});
+  this.route('settings', function() {
+    this.route('profile');
+    this.route('account');
+    this.route('projects');
+    this.route('organizations');
   });
-  this.route('teams');
-  this.route('settings');
-  this.route('profile');
   this.route('organizations', function() {
     this.route('teams', {path:'/:org/teams'});
-    this.route('projects');
+    this.route('projects', {path:'/:org/projects'});
   });
 });
 

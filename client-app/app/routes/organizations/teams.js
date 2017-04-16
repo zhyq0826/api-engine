@@ -1,24 +1,9 @@
 import Ember from 'ember';
+import {teams} from '../data/main';
 
 export default Ember.Route.extend({
-    cache: Ember.inject.service()
+    cache: Ember.inject.service('request-cache'),
     model(){
-        return [
-            {
-                'name': 'api',
-                'id': 1,
-                'description': 'wecatch team'
-            },
-            {
-                'name': 'devops',
-                'id': 2,
-                'description': 'emberjs-china team'
-            },
-            {
-                'name': 'analysis',
-                'id': 3,
-                'description': 'androidesk team'
-            },
-        ]
+        return teams;
     }
 });

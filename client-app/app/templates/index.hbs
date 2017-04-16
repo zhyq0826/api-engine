@@ -2,7 +2,7 @@
     {{#ui-column wide=4 }}
         <div class="ui segment">
             <div class="ui cards">
-            {{#each model as |project|}}
+            {{#each model.projects as |project|}}
                 {{#ui-list-card model=project }}{{/ui-list-card}}
             {{/each}}
             </div>
@@ -15,3 +15,4 @@
         </div>
     {{/ui-column}}
 </div>
+

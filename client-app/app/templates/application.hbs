@@ -1,25 +1,38 @@
-<div class="ui container">
-    <div class="ui grid">
-        <div class="row">
-            <div class="column">
-                <div class="ui pointing menu">
-                    {{#link-to "organizations" class="item" }}
-                        <h4 class="ui header">Organizations</h4>
-                    {{/link-to}}
+<div class="ui menu">
+    <div class="ui container">
+        {{#link-to "index" class="item" }}api-engine{{/link-to}}
+        <div class="right menu">
+            <a class="item">
+                Notification
+            </a>
+            {{#ui-dropdown-menu class="item" theme="" }}
+                <div class="text">
+                    <i class="plus icon"></i>
+                </div>
+                <i class="dropdown icon"></i>
+                <div class="menu">
+                    <a class="item">New Project</a>
+                    <a class="item">
+                        New Organization
+                    </a>
+                </div>
+            {{/ui-dropdown-menu}}
+            {{#ui-dropdown-menu class="item" theme="" }}
+                <div class="text">
+                    <img src="https://avatars0.githubusercontent.com/u/1224344?v=3&s=40" class="ui mini image" alt="zhyq0826">
+                </div>
+                <i class="dropdown icon"></i>
+                <div class="menu">
                     {{#link-to "settings" class="item" }}
                         <h4 class="ui header">Settings</h4>
                     {{/link-to}}
-
-                    {{#link-to "profile" class="item" }}
-                        <h4 class="ui header">Profile</h4>
-                    {{/link-to}}
+                    <a class="item">
+                        Logou out
+                    </a>
                 </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="column">
-                {{outlet}}
-            </div>
+            {{/ui-dropdown-menu}}
         </div>
     </div>
 </div>
+<div style="height:30px" ></div>
+{{outlet}}
