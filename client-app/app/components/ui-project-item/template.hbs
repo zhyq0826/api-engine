@@ -1,6 +1,6 @@
 <div class="content">
     {{#if orgName}}
-        <a href="" class="header" >{{orgName}}/{{model.name}}</a>
+        {{#link-to "project.detail" orgName model.name class="header" }}{{orgName}}/{{model.name}}{{/link-to}}
     {{else}}
         <a href="" class="header" >{{model.name}}</a>
     {{/if}}

@@ -2,9 +2,9 @@
     {{#ui-column wide=4 }}
         <div class="ui segment cc-project-segment" >
             <div class="ui items" style="background:#f1f1f1" >
-            {{#each model.projects as |project|}}
-                {{#ui-project-item model=project }}{{/ui-project-item}}
-            {{/each}}
+                {{#each model.projects as |project|}}
+                    {{#ui-project-item model=project orgName=model.orgName }}{{/ui-project-item}}
+                {{/each}}
             </div>
         </div>
     {{/ui-column}}
@@ -15,4 +15,3 @@
         </div>
     {{/ui-column}}
 </div>
-

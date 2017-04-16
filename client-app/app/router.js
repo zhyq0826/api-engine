@@ -17,6 +17,9 @@ Router.map(function() {
     this.route('teams', {path:'/:org/teams'});
     this.route('projects', {path:'/:org/projects'});
   });
+  this.route('project', {path:'/:org'}, function(){
+    this.route('detail', {path:'/:project_name'});
+  });
 });
 
 export default Router;

@@ -2,11 +2,10 @@ import Ember from 'ember';
 import {projects, orgs} from '../data/main';
 
 export default Ember.Route.extend({
-    model(){
+    model(param){
         return {
             'projects': projects,
-            'orgs': orgs
+            'orgName': param.org
         }
-    },
-    templateName: 'project'
+    }
 });
