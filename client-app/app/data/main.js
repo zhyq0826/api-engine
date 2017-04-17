@@ -109,8 +109,17 @@ const teams = [
     }
 ];
 
+function find_project_by_name(org, name) {
+    for (var i = projects[org].length - 1; i >= 0; i--) {
+        if(projects[org][i].name === name){
+            return projects[org][i];
+        }
+    }
+}
+
 export {
     orgs,
     projects,
-    teams
+    teams,
+    find_project_by_name
 }

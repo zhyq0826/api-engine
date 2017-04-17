@@ -3,6 +3,6 @@ import { projects } from '../../data/main';
 
 export default Ember.Route.extend({
     model(){
-        return projects;
+        return projects['zhyq0826'];
     }
 });

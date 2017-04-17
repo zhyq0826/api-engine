@@ -1,9 +1,5 @@
 <div class="content">
-    {{#if orgName}}
-        {{#link-to "project.detail" orgName model.name class="header" }}{{orgName}}/{{model.name}}{{/link-to}}
-    {{else}}
-        <a href="" class="header" >{{model.name}}</a>
-    {{/if}}
+    {{#link-to "project.detail" model.owner_name model.name class="header" }}{{model.owner_name}}/{{model.name}}{{/link-to}}
     <div class="meta">
         <p>
             <i class="tags icon" ></i>

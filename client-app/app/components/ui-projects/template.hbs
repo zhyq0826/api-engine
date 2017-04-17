@@ -13,10 +13,7 @@
         <div class="item">
             <div class="middle aligned content">
               <div class="header">
-                <a href="">
-                  {{project.name}}
-                </a>
-                {{!-- {{#link-to "organizations.teams" project.name }}{{project.name}}{{/link-to}} --}}
+                {{#link-to "project.detail" project.owner_name project.name }}{{project.name}}{{/link-to}}
               </div>
               <div class="description">
                   {{project.description}}
