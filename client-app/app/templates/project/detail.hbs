@@ -11,16 +11,19 @@
     <div class="row">
         <div class="column">
             <div class="ui secondary pointing menu">
-              <a class="item active">
-                Api
-              </a>
-              <a class="item">
-                Run status
-              </a>
-              <a class="item">
-                Settings
-              </a>
+              {{#link-to "project.detail.api-new" class="item" }}
+                <i class="plus icon" ></i>
+                  New api
+              {{/link-to}}
+              {{#link-to "project.detail.api" class="item" }}Api{{/link-to}}
+              {{#link-to "project.detail.group" class="item" }}Group{{/link-to}}
+              {{#link-to "project.detail.settings" class="item" }}Settings{{/link-to}}
             </div>
+        </div>
+    </div>
+    <div class="row" >
+        <div class="column">
+            {{outlet}}
         </div>
     </div>
 </div>

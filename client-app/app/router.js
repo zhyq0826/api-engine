@@ -18,7 +18,12 @@ Router.map(function() {
     this.route('projects', {path:'/:org/projects'});
   });
   this.route('project', {path:'/:org'}, function(){
-    this.route('detail', {path:'/:project_name'});
+    this.route('detail', {path:'/:project_name'}, function() {
+      this.route('settings');
+      this.route('api');
+      this.route('group');
+      this.route('api-new');
+    });
   });
 });
 
