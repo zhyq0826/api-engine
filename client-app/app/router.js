@@ -25,6 +25,9 @@ Router.map(function() {
       this.route('api-new');
     });
   });
+  this.route('project-dashboard', {path:'/:project_id/dashboard'}, function(){
+    
+  });
 });
 
 export default Router;

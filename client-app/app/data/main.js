@@ -109,6 +109,27 @@ const teams = [
     }
 ];
 
+
+const groups = [{
+            'id': 1,
+            'name': 'wallpaper',
+            'description': 'wallpaper description',
+            'create_time': '2013-10-11 10:11',
+            'update_time': '2013-10-11 10:11'
+        },{
+            'id': 2,
+            'name': 'ring',
+            'description': 'wallpaper description',
+            'create_time': '2013-10-11 10:11',
+            'update_time': '2013-10-11 10:11'
+        },{
+            'id': 3,
+            'name': 'food',
+            'description': 'wallpaper description',
+            'create_time': '2013-10-11 10:11',
+            'update_time': '2013-10-11 10:11'
+        },];
+
 function find_project_by_name(org, name) {
     for (var i = projects[org].length - 1; i >= 0; i--) {
         if(projects[org][i].name === name){
@@ -121,5 +142,6 @@ export {
     orgs,
     projects,
     teams,
+    groups,
     find_project_by_name
 }

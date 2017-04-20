@@ -11,3 +11,22 @@
     </div>
 </div>
 
+<div class="ui items">
+    {{#each model as |group|}}
+    <div class="item">
+        <div class="middle aligned content">
+            <div class="header">
+                {{#link-to "project-dashboard" group }}{{group.name}}{{/link-to}}                
+            </div>
+            <div class="description">
+              {{group.description}}
+            </div>
+            <div class="meta">
+                <span>Create at: {{group.create_time}}</span>
+                <span>Update at: {{group.update_time}}</span>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
+
