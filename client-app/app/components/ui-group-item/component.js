@@ -1,5 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-    classNames: ['item', 'cc-group-item']
+    classNames: ['cc-group-item'],
+    actions: {
+        toggleContent(){
+            this.$('.js-content').toggle();
+        }
+    }
 });

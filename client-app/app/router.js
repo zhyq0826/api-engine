@@ -26,7 +26,7 @@ Router.map(function() {
     });
   });
   this.route('project-dashboard', {path:'/:project_id/dashboard'}, function(){
-    
+    this.route('api-detail', {path:'/:id'});
   });
 });
 
