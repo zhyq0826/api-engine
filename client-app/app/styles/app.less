@@ -1,4 +1,7 @@
 @green: #39aa56;
+@red: #db2828;
+@blue: #2185d0;
+@grey: #767676;
 
 .card.cc-list-card {
     border-left: 5px solid @green !important; 
@@ -34,8 +37,30 @@
 }
 
 .cc-group-item {
-    .content>.header>span {
+    .content>a>span {
         color: #555 !important;
         font-weight: normal !important;
+    }
+
+    .content a.grey {
+        color: @grey !important;
+    }
+
+    .content a.blue {
+        color: @blue !important;
+    }
+    .content a.green {
+        color: @green !important;
+    }
+    .content a.red {
+        color: @red !important;
+    }
+
+    .ui.list {
+        margin: 0;
+    }
+
+    .item {
+        position: relative;
     }
 }

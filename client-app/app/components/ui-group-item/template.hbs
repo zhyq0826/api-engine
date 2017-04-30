@@ -1,17 +1,18 @@
 <div class="ui selection list">
-    <div class="item" {{action "toggleContent"}} >
-        <i class="folder icon"></i>
-        <div class="content">
+    <div class="item"  style="position:relative" {{action "toggleContent"}} >
+        <i class="folder {{if isOpenFolder 'open' ''}} icon"></i>
+        <div class="content"  >
             <div class="header">
                 {{model.name}}
             </div>
         </div>
+        <i class="setting icon" style="position:absolute;top:5px;right:10px;" ></i>
     </div>
 </div>
 <div class="ui selection list js-content" >
     <div class="item">
         <div class="content">
-            {{#link-to "project-dashboard.api-detail" 1 class="ui green header" }}
+            {{#link-to "project-dashboard.api-detail" 1 class="green" }}
                 Get
                 <span>Get TODO</span>
             {{/link-to}}
@@ -19,7 +20,7 @@
     </div>
     <div class="item">
         <div class="content">
-            {{#link-to "project-dashboard.api-detail" 2 class="ui grey header" }}
+            {{#link-to "project-dashboard.api-detail" 2 class="grey" }}
                 Post
                 <span>Post TODO</span>
             {{/link-to}}
@@ -27,7 +28,7 @@
     </div>
     <div class="item">
         <div class="content">
-            {{#link-to "project-dashboard.api-detail" 3 class="ui blue header" }}
+            {{#link-to "project-dashboard.api-detail" 3 class="blue" }}
                 Update
                 <span>Update TODO</span>
             {{/link-to}}
@@ -35,7 +36,7 @@
     </div>
     <div class="item">
         <div class="content">
-            {{#link-to "project-dashboard.api-detail" 4 class="ui red header" }}
+            {{#link-to "project-dashboard.api-detail" 4 class="red" }}
                 Delete
                 <span>Delete TODO</span>
             {{/link-to}}
