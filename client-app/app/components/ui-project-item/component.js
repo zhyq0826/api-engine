@@ -1,5 +1,5 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-    classNames: ['item', 'cc-project-item', 'cc-passed']
+    classNames: ['item', 'cc-project-item']
 });

@@ -1,0 +1,41 @@
+<div class="ui container">
+  <div class="ui grid">
+    <div class="row">
+        <div class="column">
+            <div class="ui big breadcrumb">
+                <a class="section">{{model.owner_name}}</a>
+                <i class="right chevron icon divider"></i>
+                <div class="active section">{{model.name}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <div class="ui secondary pointing menu">
+              {{#link-to "project-detail.api"  class="item" }}
+                <i class="dashboard icon" ></i>
+                Api
+              {{/link-to}}
+              {{#link-to "project-detail.testing" model.name class="item" }}
+                <i class="folder icon" ></i>
+                Testing
+              {{/link-to}}
+              {{#link-to "project-detail.docs" model.name class="item" }}
+                <i class="setting icon" ></i>
+                  Docs
+              {{/link-to}}
+              {{#link-to "project-detail.settings" model.name class="item" }}
+                <i class="setting icon" ></i>
+                  Settings
+              {{/link-to}}
+            </div>
+        </div>
+    </div>
+    <div class="row" >
+        <div class="column">
+            {{outlet}}
+        </div>
+    </div>
+  </div>
+</div>
+
