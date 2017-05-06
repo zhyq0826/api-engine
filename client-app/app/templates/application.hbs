@@ -1,6 +1,7 @@
 <div class="ui blue inverted menu" style="border-radius:0 !important" >
     <div class="ui container">
         {{#link-to "index" class="item" }}api-engine{{/link-to}}
+        {{#link-to "workspaces" class="item" }}workspaces{{/link-to}}
         <div class="right menu">
             <a class="item">
                 Notification
@@ -11,7 +12,7 @@
                 </div>
                 <i class="dropdown icon"></i>
                 <div class="menu">
-                    <a class="item">New Project</a>
+                    {{#link-to "new-workspace" class="item" }}New workspace{{/link-to}}
                     <a class="item">
                         New Organization
                     </a>
@@ -34,5 +35,4 @@
         </div>
     </div>
 </div>
-<div style="height:30px" ></div>
 {{outlet}}

@@ -17,7 +17,10 @@ Router.map(function() {
     this.route('teams', {path:'/:org/teams'});
     this.route('projects', {path:'/:org/projects'});
   });
-  this.route('project', {path:'/:org'});
+  this.route('project', {path:'/:org'}, function() {
+    this.route('workspace');
+    this.route('orgs');
+  });
   this.route('project-dashboard', {path:'/:project_id/dashboard'}, function(){
     this.route('api-detail', {path:'/:id'});
     this.route('environment');
@@ -41,6 +44,9 @@ Router.map(function() {
     });
     this.route('testing');
   });
+  this.route('new-workspace');
+  this.route('new-organization');
+  this.route('workspaces');
 });
 
 export default Router;

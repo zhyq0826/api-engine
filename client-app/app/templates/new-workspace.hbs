@@ -1,0 +1,32 @@
+<div class="ui container">
+    <div class="ui form">
+        <div class="ui header">
+            Create a new workspace
+        </div>
+        <div>
+            <p>
+                Workspace 是逻辑上的 api 组织，一个 workspace 可能包含一组或多组项目，比如 api 可以根据版本划分
+                v1, v2, v3，每个版本可能对应不同的项目
+            </p>
+            <p>
+                Workspaces allow you to organize your APIs and stakeholders (team members, clients, etc) into logical groups.
+            </p>
+            <p>
+                For example, you could create a workspace for a particular team within your organization, and the APIs they work on. Or you could create a workspace for a client project, and invite your developers, and the client, to the workspace. Etc.
+            </p>
+        </div>
+        <div class="ui divider"></div>
+        <div class="fields">
+            <div class="field">
+                <label for="">Owner</label>
+                {{ui-select options=model.orgs valuePath="id" value=(mut id)}}
+            </div>
+            {{ui-form-input label="name"}}
+        </div>
+        <p>
+            Great repository names are short and memorable. Need inspiration? How about silver-octo-tribble.
+        </p>
+        {{ui-form-input label="description(optional)"}}
+        <button class="ui green button">Create new workspace</button>
+    </div>
+</div>
