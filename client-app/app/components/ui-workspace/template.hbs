@@ -24,7 +24,7 @@
     </div>
     <div class="ui fluid vertical menu">
         {{#each projects as |project|}}
-            {{#link-to "project-detail" project.owner_name project.name class="link item" }}
+            {{#link-to "api-detail" project.owner_name project.name class="link item" }}
                 {{project.name}}
             {{/link-to}}
         {{/each}}

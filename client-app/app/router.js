@@ -13,40 +13,33 @@ Router.map(function() {
     this.route('projects');
     this.route('organizations');
   });
-  this.route('organizations', function() {
-    this.route('teams', {path:'/:org/teams'});
-    this.route('projects', {path:'/:org/projects'});
+  this.route('new-workspace');
+  this.route('new-organization');
+  this.route('organization', function() {
+    this.route('invite', {path: '/:org/invite'});
   });
-  this.route('project', {path:'/:org'}, function() {
+  this.route('organization-detail', {path: '/:org'}, function() {
+    this.route('workspace');
+  });
+  this.route('my', function() {
     this.route('workspace');
     this.route('orgs');
   });
-  this.route('project-dashboard', {path:'/:project_id/dashboard'}, function(){
-    this.route('api-detail', {path:'/:id'});
-    this.route('environment');
+  this.route('api');
+  this.route('api-dashboard', function() {
+    this.route('api-detail');
+    this.route('env');
+    this.route('new-end-point');
     this.route('new-group');
     this.route('new-model');
-    this.route('new-end-point');
   });
-  this.route('project-detail', {path:'/:org/:project_name'}, function() {
-    this.route('settings', function() {
-      this.route('options');
-      this.route('trigger-url');
-      this.route('webhook');
-    });
-    this.route('api');
-    this.route('group');
+  this.route('api-detail', {path:'/:org/:project_name'}, function() {
+    this.route('testing');
+    this.route('docs');
+    this.route('settings');
     this.route('global');
     this.route('options');
-    this.route('docs', function() {
-      this.route('preview');
-      this.route('publish');
-    });
-    this.route('testing');
   });
-  this.route('new-workspace');
-  this.route('new-organization');
-  this.route('workspaces');
 });
 
 export default Router;

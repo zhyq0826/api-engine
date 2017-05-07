@@ -8,5 +8,5 @@ export default Ember.Route.extend({
             'orgs': orgs
         }
     },
-    templateName: 'project'
+    templateName: 'my'
 });
