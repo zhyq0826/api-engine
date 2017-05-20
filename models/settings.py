@@ -1,20 +1,13 @@
 # -*- coding:utf-8 -*-
 
 from db.mongo_conn import (
-    test as _test,
-    user as _user,
-
-    test_files as _test_files,
-    user_files as _user_files,
+    api_engine as _api_engine,
 )
 
 MONGO_DB_MAPPING = {
     'db': {
-        'test': _test,
-        'user': _user,
+        'api_engine': _api_engine,
     },
     'db_file': {
-        'test': _test_files,
-        'user': _user_files,
     }
 }
